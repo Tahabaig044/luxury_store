@@ -70,14 +70,14 @@ export default function Footer() {
             <p className="text-sm text-gray-600 mb-4">
               Sign up to receive the latest updates from Sara.
             </p>
-            <div className="flex">
+            <div className="flex-col">
               <input
                 type="email"
                 placeholder="Your email address"
-                className="flex-1 px-3 py-2 border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#806a57] focus:border-transparent"
+                className="flex-1 px-3 py-2 border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#806a57] focus:border-transparent w-full rounded"
               />
               <Link href="/sign-up" >
-              <button className="bg-black text-white px-4 py-2 text-sm font-medium hover:bg-gray-800 transition-colors">
+              <button className="bg-black text-white px-4 py-2 text-sm font-medium hover:bg-gray-800 transition-colors w-full">
                 Subscribe
               </button>
               </Link>
