@@ -8,6 +8,7 @@ import { useUser } from "@clerk/nextjs"
 import { useEffect, useState } from "react"
 import { Heart } from "lucide-react"
 import Link from "next/link"
+// import type { UserType } from "@/types" // Adjust the path as needed
 
 interface ProductType {
   _id: string;
@@ -108,8 +109,7 @@ const Wishlist = () => {
               <ProductCard 
                 key={product._id} 
                 product={product} 
-                updateSignedInUser={updateSignedInUser} 
-                showRemoveFromWishlist={true}
+                
               />
             ))}
           </div>
