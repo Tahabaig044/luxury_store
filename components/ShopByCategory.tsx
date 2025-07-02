@@ -4,25 +4,26 @@ const mainCategories = [
   {
     id: 'basics',
     name: 'BASICS',
-    image: '/banner.png',
+    image: '/cotegory/im1.jpg',
+    // image: '/public/cotegory/im1jpg',
     bgColor: '#554537'
   },
   {
     id: 'luxury-pret',
     name: 'LUXURY PRET',
-    image: 'https://ext.same-assets.com/2520327791/375037467.gif',
+    image: '/cotegory/im2.jpg',
     bgColor: '#806a57'
   },
   {
     id: 'jewelry',
     name: 'JEWELRY',
-    image: 'https://ext.same-assets.com/2520327791/375037467.gif',
+    image: '/cotegory/im3.jpg',
     bgColor: '#98918e'
   },
   {
     id: 'menswear',
     name: 'MENSWEAR',
-    image: 'https://ext.same-assets.com/2520327791/375037467.gif',
+    image: '/cotegory/im4.jpg',
     bgColor: '#b28b65'
   }
 ]
@@ -31,42 +32,42 @@ const springSummerCategories = [
   {
     id: 'prints-unstitched',
     name: 'PRINTS UNSTITCHED',
-    image: 'https://ext.same-assets.com/2520327791/375037467.gif',
+    image: '/cotegory/im1.jpg',
     bgColor: '#554537',
     size: 'large'
   },
   {
     id: 'printed',
     name: 'PRINTED',
-    image: 'https://ext.same-assets.com/2520327791/375037467.gif',
+    image: '/cotegory/im2.jpg',
     bgColor: '#806a57',
     size: 'medium'
   },
   {
     id: 'festive',
     name: 'FESTIVE',
-    image: 'https://ext.same-assets.com/2520327791/375037467.gif',
+    image: '/cotegory/im3.jpg',
     bgColor: '#98918e',
     size: 'medium'
   },
   {
     id: 'essential-pret',
     name: 'ESSENTIAL PRET',
-    image: 'https://ext.same-assets.com/2520327791/375037467.gif',
+    image: '/cotegory/im4.jpg',
     bgColor: '#b28b65',
     size: 'large'
   },
   {
     id: 'ready-to-wear-2pc',
     name: 'READY TO WEAR - 2 PC',
-    image: 'https://ext.same-assets.com/2520327791/375037467.gif',
+    image: '/cotegory/im5.jpg',
     bgColor: '#806a57',
     size: 'medium'
   },
   {
     id: 'ready-to-wear-3pc',
     name: 'READY TO WEAR - 3 PC',
-    image: 'https://ext.same-assets.com/2520327791/375037467.gif',
+    image: '/cotegory/im6.jpg',
     bgColor: '#ceccc5',
     size: 'medium'
   }
@@ -89,9 +90,22 @@ export default function ShopByCategory() {
                 className="relative group cursor-pointer overflow-hidden rounded-lg"
                 style={{ backgroundColor: category.bgColor }}
               >
+                {/* {category.image && (
+                  <Image
+                    src={category.image}
+                    alt={category.name}
+                    layout="fill"
+                    objectFit="cover"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                )} */}
                 <div className="aspect-square flex items-center justify-center text-white">
                   <div className="absolute inset-0">
-                    <div
+                    <Image
+                    src={category.image}
+                    alt={category.name}
+                    layout="fill"
+                    objectFit="cover"
                       className="w-full h-full opacity-80"
                       style={{ backgroundColor: category.bgColor }}
                     />
@@ -123,9 +137,23 @@ export default function ShopByCategory() {
                 className="relative group cursor-pointer overflow-hidden rounded-lg h-full min-h-[300px] lg:min-h-[400px]"
                 style={{ backgroundColor: springSummerCategories[0].bgColor }}
               >
-                <div className="h-full flex items-center justify-center text-white">
+              {/* <Image
+                src={springSummerCategories[1].image}
+                alt={springSummerCategories[0].name}
+                layout="fill"
+                objectFit="cover"
+                className="relative group cursor-pointer overflow-hidden rounded-lg h-full min-h-[300px] lg:min-h-[400px]"
+                style={{ backgroundColor: springSummerCategories[0].bgColor }}
+              /> */}
+                
+                <div
+                 className="h-full flex items-center justify-center text-white">
                   <div className="absolute inset-0">
-                    <div
+                    <Image
+                    src={springSummerCategories[0].image}
+                alt={springSummerCategories[0].name}
+                      layout="fill"
+                      objectFit="cover"
                       className="w-full h-full opacity-80"
                       style={{ backgroundColor: springSummerCategories[0].bgColor }}
                     />
@@ -150,7 +178,11 @@ export default function ShopByCategory() {
               >
                 <div className="h-full flex items-center justify-center text-white">
                   <div className="absolute inset-0">
-                    <div
+                    <Image
+                    src={springSummerCategories[1].image}
+                alt={springSummerCategories[1].name}
+                      layout="fill"
+                      objectFit="cover"
                       className="w-full h-full opacity-80"
                       style={{ backgroundColor: springSummerCategories[1].bgColor }}
                     />
@@ -175,7 +207,11 @@ export default function ShopByCategory() {
               >
                 <div className="h-full flex items-center justify-center text-white">
                   <div className="absolute inset-0">
-                    <div
+                   <Image
+                    src={springSummerCategories[2].image}
+                alt={springSummerCategories[2].name}
+                      layout="fill"
+                      objectFit="cover"
                       className="w-full h-full opacity-80"
                       style={{ backgroundColor: springSummerCategories[2].bgColor }}
                     />
@@ -200,7 +236,11 @@ export default function ShopByCategory() {
               >
                 <div className="h-full flex items-center justify-center text-white">
                   <div className="absolute inset-0">
-                    <div
+                    <Image
+                    src={springSummerCategories[3].image}
+                alt={springSummerCategories[3].name}
+                      layout="fill"
+                      objectFit="cover"
                       className="w-full h-full opacity-80"
                       style={{ backgroundColor: springSummerCategories[3].bgColor }}
                     />
@@ -225,7 +265,11 @@ export default function ShopByCategory() {
               >
                 <div className="h-full flex items-center justify-center text-white">
                   <div className="absolute inset-0">
-                    <div
+                    <Image
+                    src={springSummerCategories[4].image}
+                alt={springSummerCategories[4].name}
+                      layout="fill"
+                      objectFit="cover"
                       className="w-full h-full opacity-80"
                       style={{ backgroundColor: springSummerCategories[4].bgColor }}
                     />
@@ -250,7 +294,11 @@ export default function ShopByCategory() {
               >
                 <div className="h-full flex items-center justify-center text-white">
                   <div className="absolute inset-0">
-                    <div
+                    <Image
+                    src={springSummerCategories[5].image}
+                alt={springSummerCategories[5].name}
+                      layout="fill"
+                      objectFit="cover"
                       className="w-full h-full opacity-80"
                       style={{ backgroundColor: springSummerCategories[5].bgColor }}
                     />
