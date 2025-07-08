@@ -2,7 +2,7 @@
 
 import useCart from "@/lib/hooks/useCart";
 import { UserButton, useUser } from "@clerk/nextjs";
-import { CircleUserRound, ShoppingCart } from "lucide-react";
+import { CircleUserRound, Search, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -162,9 +162,9 @@ const Navbar = () => {
             <SheetContent className="bg-[#f9f5f0] border-l border-[#e8e3dc]">
               <div className="flex flex-col h-full pt-12">
                 {/* Mobile Search */}
-                <div className="flex items-center justify-between gap-2 bg-white border border-[#e8e3dc] p-2 rounded-sm mb-8">
+                <div className="flex items-center bg-white border border-[#e8e3dc] p-2 rounded-sm mb-8">
                   <input
-                    className="flex-1 bg-transparent outline-none pl-2 text-sm"
+                    className="flex-1 bg-transparent outline-none text-sm"
                     placeholder="Search..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
@@ -174,6 +174,7 @@ const Navbar = () => {
                     disabled={query === ""}
                     onClick={() => query && router.push(`/search/${query}`)}
                   >
+                    {/* <Search/> */}
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#b89d7a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
